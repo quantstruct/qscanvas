@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { StackProvider, StackTheme } from "@stackframe/stack";
+import { stackServerApp } from "../stack";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -19,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-screen">
-      <body className={cn("min-h-full", inter.className)}>{children}</body>
+      <body className={cn("min-h-full", inter.className)}><StackProvider app={stackServerApp}><StackTheme>{children}</StackTheme></StackProvider></body>
     </html>
   );
 }
