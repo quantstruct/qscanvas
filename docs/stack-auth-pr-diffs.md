@@ -17,6 +17,8 @@ Below are the diffs for the first two files changed in the PR to add stack-auth 
      "@types/react-syntax-highlighter": "^15.5.13",
 ```
 
+This change adds the `@stackframe/stack` dependency.
+
 ---
 
 ## 2. apps/web/src/app/handler/[...stack]/page.tsx (added)
@@ -30,6 +32,8 @@ Below are the diffs for the first two files changed in the PR to add stack-auth 
 +  return <StackHandler fullPage app={stackServerApp} routeProps={props} />;
 +}
 ```
+
+This new file defines a handler page using `StackHandler` and `stackServerApp`.
 
 ---
 
